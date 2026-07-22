@@ -16,6 +16,7 @@ build/
 .cache/
 .parcel-cache/
 .vite/
+.wrangler/
 
 # Logs
 *.log
@@ -30,4 +31,3 @@ yarn-error.log*
 
 # Local verification screenshots
 verify-*.png
-
