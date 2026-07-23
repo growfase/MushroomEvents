@@ -1352,6 +1352,14 @@ h2 strong {
   height: 100%;
   object-fit: cover;
   object-position: center left;
+  -webkit-mask-image:
+    linear-gradient(90deg, #000 0 58%, transparent 100%),
+    linear-gradient(180deg, transparent 0%, #000 14%, #000 76%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(90deg, #000 0 58%, transparent 100%),
+    linear-gradient(180deg, transparent 0%, #000 14%, #000 76%, transparent 100%);
+  mask-composite: intersect;
 }
 
 .offer::after {
@@ -1359,8 +1367,8 @@ h2 strong {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 38% 48%, transparent 0 18%, #000 58%),
-    linear-gradient(180deg, transparent 65%, #000 92%);
+    linear-gradient(90deg, transparent 0 26%, rgba(0, 0, 0, 0.68) 48%, #000 67%),
+    linear-gradient(180deg, #000 0%, transparent 20%, transparent 70%, #000 100%);
 }
 
 .offer-copy {
@@ -2009,10 +2017,21 @@ h2 strong {
     opacity: 1;
     object-fit: cover;
     object-position: center;
+    -webkit-mask-image:
+      linear-gradient(90deg, transparent 0%, #000 12%, #000 88%, transparent 100%),
+      linear-gradient(180deg, transparent 0%, #000 14%, #000 78%, transparent 100%);
+    -webkit-mask-composite: source-in;
+    mask-image:
+      linear-gradient(90deg, transparent 0%, #000 12%, #000 88%, transparent 100%),
+      linear-gradient(180deg, transparent 0%, #000 14%, #000 78%, transparent 100%);
+    mask-composite: intersect;
   }
 
   .offer::after {
-    display: none;
+    display: block;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(180deg, #000 0%, transparent 18%, transparent 54%, #000 74%);
   }
 
   .offer-copy {
