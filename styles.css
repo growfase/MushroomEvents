@@ -1694,8 +1694,14 @@ h2 strong {
   }
 
   .pain-card {
-    max-height: calc(100svh - 40px);
+    max-height: calc(100svh - 28px);
     overflow: hidden;
+  }
+
+  .type-char,
+  .pain-card li {
+    filter: none;
+    transition: opacity 80ms ease;
   }
 
   .wine-card {
@@ -1726,7 +1732,7 @@ h2 strong {
 
   .pain-card h2,
   .pain-card blockquote {
-    font-size: 25px;
+    font-size: 23px;
     line-height: 1.12;
   }
 
@@ -2056,6 +2062,40 @@ h2 strong {
     line-height: 1.55;
   }
 
+  .final-cta {
+    min-height: auto;
+    padding: 80px 0 68px;
+  }
+
+  .final-cta .wine-card {
+    width: calc(100% - 32px);
+    gap: 22px;
+    padding: 34px 22px 36px;
+    border-radius: 16px;
+  }
+
+  .final-cta h2 {
+    max-width: 100%;
+    font-size: 27px;
+    line-height: 1.12;
+  }
+
+  .final-cta .button {
+    max-width: none;
+    min-height: 58px;
+    font-size: 17px;
+  }
+
+  .final-cta .button span {
+    line-height: 1.15;
+  }
+
+  .final-cta .wine-card > p {
+    max-width: 100%;
+    font-size: 18px;
+    line-height: 1.35;
+  }
+
   .cta-logo,
   .footer-inner > img {
     width: 250px;
@@ -2087,7 +2127,7 @@ h2 strong {
 
   .pain-card h2,
   .pain-card blockquote {
-    font-size: 25px;
+    font-size: 22px;
     line-height: 1.12;
   }
 

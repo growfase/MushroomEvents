@@ -5,6 +5,7 @@ const scene = document.querySelector("[data-scroll-scene]");
 const curtains = document.querySelector(".scroll-curtains");
 const aboutScene = document.querySelector("[data-about-scene]");
 const aboutCard = document.querySelector(".about-card");
+let scrollFrame = null;
 
 function wrapTextNode(node, bucket) {
   const fragment = document.createDocumentFragment();
@@ -76,7 +77,7 @@ function updateAboutScene() {
   if (isMobile) {
     const aboutImage = aboutCard.querySelector("figure");
     const aboutCopy = aboutCard.querySelector(".about-copy");
-    const mobileImageLift = Math.min(250, Math.max(170, window.innerHeight * 0.3));
+    const mobileImageLift = Math.min(125, Math.max(85, window.innerHeight * 0.15));
     const imageHeight = aboutImage?.offsetHeight || 400;
     const copyHeight = aboutCopy?.offsetHeight || 500;
     const mobileCopyShift = Math.max(180, (imageHeight + copyHeight) / 2 - mobileImageLift);
@@ -115,10 +116,18 @@ function prepareScrollCards() {
   items.forEach((item) => observer.observe(item));
 }
 
-window.addEventListener("scroll", () => {
+function updateScrollEffects() {
+  scrollFrame = null;
   updateScene();
   updateAboutScene();
-}, { passive: true });
+}
+
+function requestScrollUpdate() {
+  if (scrollFrame !== null) return;
+  scrollFrame = window.requestAnimationFrame(updateScrollEffects);
+}
+
+window.addEventListener("scroll", requestScrollUpdate, { passive: true });
 window.addEventListener("resize", () => {
   updateScene();
   updateAboutScene();
