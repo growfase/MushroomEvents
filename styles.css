@@ -1849,8 +1849,8 @@ h2 strong {
 
   .about-card {
     width: calc(100% - 32px);
-    height: calc(100svh + 260px);
-    min-height: 860px;
+    height: calc(100svh + 310px);
+    min-height: 910px;
   }
 
   .about-card figure {
@@ -2197,7 +2197,7 @@ h2 strong {
   }
 
   .about-card {
-    height: calc(100svh + 340px);
-    min-height: 900px;
+    height: calc(100svh + 390px);
+    min-height: 950px;
   }
 }
