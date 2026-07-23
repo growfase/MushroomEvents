@@ -958,6 +958,34 @@ h2 strong {
   object-fit: cover;
 }
 
+.about-photo-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  display: grid;
+  gap: 4px;
+  padding: 84px 34px 28px;
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.72) 100%);
+  color: #fff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.72);
+}
+
+.about-photo-caption strong {
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.05;
+}
+
+.about-photo-caption span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.25;
+}
+
 .about-copy {
   position: absolute;
   left: 50%;
