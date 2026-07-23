@@ -74,7 +74,7 @@ function updateAboutScene() {
   const isMobile = window.matchMedia("(max-width: 700px)").matches;
 
   if (isMobile) {
-    const mobileCopyShift = Math.min(465, Math.max(330, window.innerHeight * 0.58));
+    const mobileCopyShift = Math.min(620, Math.max(460, window.innerHeight * 0.82));
     aboutCard.style.setProperty("--about-image-shift", "0px");
     aboutCard.style.setProperty("--about-image-lift", "0px");
     aboutCard.style.setProperty("--about-copy-shift", `${Math.round(eased * mobileCopyShift)}px`);
