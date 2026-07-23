@@ -1816,7 +1816,7 @@ h2 strong {
     width: min(100%, 420px);
     height: min(430px, 48svh);
     border-radius: 10px;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, calc(-50% - var(--about-image-lift)));
   }
 
   .about-copy {
