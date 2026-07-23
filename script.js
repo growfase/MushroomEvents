@@ -74,8 +74,8 @@ function updateAboutScene() {
   const isMobile = window.matchMedia("(max-width: 700px)").matches;
 
   if (isMobile) {
-    const mobileCopyShift = Math.min(540, Math.max(410, window.innerHeight * 0.68));
-    const mobileImageLift = Math.min(200, Math.max(140, window.innerHeight * 0.26));
+    const mobileCopyShift = Math.min(425, Math.max(360, window.innerHeight * 0.46));
+    const mobileImageLift = Math.min(250, Math.max(170, window.innerHeight * 0.3));
     aboutCard.style.setProperty("--about-image-shift", "0px");
     aboutCard.style.setProperty("--about-image-lift", `${Math.round(eased * mobileImageLift)}px`);
     aboutCard.style.setProperty("--about-copy-shift", `${Math.round(eased * mobileCopyShift)}px`);
