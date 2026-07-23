@@ -1847,10 +1847,18 @@ h2 strong {
     height: 260px;
   }
 
+  .about {
+    min-height: 285svh;
+  }
+
+  .about-stage {
+    height: 150svh;
+  }
+
   .about-card {
     width: calc(100% - 32px);
-    height: calc(100svh + 460px);
-    min-height: 1060px;
+    height: 150svh;
+    min-height: 1120px;
   }
 
   .about-card figure {
